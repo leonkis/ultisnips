@@ -4,65 +4,366 @@ priority -50
 # MATH STUFF #
 ##############
 
-snippet all
+snippet mm "Math" wA
+\[
+${1:${VISUAL}}
+\] 
+$0
+endsnippet
+
+
+
+
+
+
+
+
+
+
+
+
+
+snippet all "For all" w
 \forall
 endsnippet
 
-snippet in
+snippet in "In" w
 \in
 endsnippet
 
-snippet quad
+snippet quad "A kind of space" w
 \quad
 endsnippet
 
-snippet exist
+snippet exist "Exists" w
 \exists
 endsnippet
 
-snippet exists
+snippet exists "Exists" w
 \exists
 endsnippet
 
-snippet leq
-\leq
+snippet != "Doesn't equal" iA
+\neq
 endsnippet
 
-snippet geq
-\geq
+snippet <= "Less or equal" iA
+\leqslant
 endsnippet
 
-snippet le
-
+snippet >= "Greater or equal" iA
+\geqslant
 endsnippet
 
-snippet epsilon	
+snippet >> "Much greater" iA
+\gg
+endsnippet
+
+snippet << "Much less" iA
+\ll
+endsnippet
+
+snippet !< "Not less" iA
+\nless
+endsnippet
+
+snippet !> "Not greater" iA
+\ngtr
+endsnippet
+
+snippet !<= "Not less or eq" iA
+\nleqslant
+endsnippet
+
+snippet !>= "Not greater or eq" iA
+\ngeqslant
+endsnippet
+
+snippet psub "Proper subset" wA
+\subset
+endsnippet
+
+snippet npsub "Not proper subset" wA
+\not\subset
+endsnippet
+
+snippet sub "Subset" w
+\subseteq
+endsnippet
+
+snippet nsub "Not subset" wA
+\nsubseteq
+endsnippet
+
+snippet psup "Proper superset" wA
+\supset
+endsnippet
+
+snippet npsup "Not prop superset" wA
+\not\supset
+endsnippet
+
+snippet sup "Superset" w
+\supseteq
+endsnippet
+
+snippet nsup "Not superset" wA
+\nsupseteq
+endsnippet
+
+snippet === "Equivalent" iA
+\equiv
+endsnippet
+
+snippet app "Approximate" w
+\approx
+endsnippet
+
+snippet con "Congruent" w
+\cong
+endsnippet
+
+snippet sim "Similar" w
+\sim
+endsnippet
+
+snippet par "Parallel" w
+\parallel
+endsnippet
+
+snippet npar "Not parallel" w
+\nparallel
+endsnippet
+
+priority 1000
+snippet !|| "Not parallel" iA
+\nparallel
+endsnippet
+
+priority 10
+snippet || "Parallel" iA
+\parallel
+endsnippet
+
+snippet perp "Perpendicular" w
+\perp
+endsnippet
+
+snippet pm "Plus minus" w
+\pm
+endsnippet
+
+snippet mp "Minus plus" w
+\mp
+endsnippet
+
+snippet setm "Set minus" wA
+\setminus
+endsnippet
+
+snippet xx "Times, letter x" iA
+\times
+endsnippet
+
+snippet div "Divided" w
+\div
+endsnippet
+
+snippet cdot "Center dot" wA
+\cdot
+endsnippet
+
+snippet cup "Set union" w
+\cup
+endsnippet
+
+snippet cap "Set intersection" w
+\cap
+endsnippet
+
+
+priority 1000
+snippet !ee "Not member of" iA
+\notin
+endsnippet
+
+snippet nee "Not member of" iA
+\notin
+endsnippet
+
+priority 10
+snippet ee "Member of" iA
+\in
+endsnippet
+
+snippet /0 "Empty set" wA
+\O
+endsnippet
+
+snippet /O "Empty set" wA
+\O
+endsnippet
+
+snippet empt "Empty set" w
+\O
+endsnippet
+
+priority 1000
+snippet NEE "There is no" iA
+\nexists
+endsnippet
+
+snippet !EE "There is no" iA
+\nexists
+endsnippet
+
+priority 10
+snippet EE "Exists" iA
+\exists
+endsnippet
+
+snippet EE! "Exists only one" iA
+\exists!
+endsnippet
+
+snippet AA "For all" iA
+\forall
+endsnippet
+
+snippet not "Not" w
+\neg
+endsnippet
+
+snippet or "Logical or" w
+\lor
+endsnippet
+
+snippet and "Logical and" w
+\land
+endsnippet
+
+snippet impl "Implies" w
+\implies
+endsnippet
+
+snippet => "Implies" iA
+\implies
+endsnippet
+
+snippet iff "iff" iA
+\iff
+endsnippet
+
+snippet top "Top" w
+\top
+endsnippet
+
+snippet bot "Bottom" w
+\bot
+endsnippet
+
+snippet rar "Right arrow" w
+\Rightarrow
+endsnippet
+
+snippet lrar "Long right arrow" wA
+\Longrightarrow
+endsnippet
+
+snippet lar "Left arrow" w
+\Leftarrow
+endsnippet
+
+snippet llar "Long left arrow" wA
+\Longleftarrow
+endsnippet
+
+snippet ovrl "Segment, line above" wA
+\overline{\rm $1} $0
+endsnippet
+
+snippet ovra "Ray (half-line), arrow above" wA
+\overrightarrow{\rm $1} $0
+endsnippet
+
+snippet ang "Angle" w
+\angle
+endsnippet
+
+snippet lc "Left ceiling" iA
+\lceil
+endsnippet
+
+snippet rc "Right ceiling" iA
+\rceil
+endsnippet
+
+snippet lf "Left floor" iA
+\lfloor
+endsnippet
+
+snippet rf "Right floor" iA
+\rfloor
+endsnippet
+
+snippet la "Left angle" w
+\langle
+endsnippet
+
+snippet ra "Right angle" w
+\rangle
+endsnippet
+
+
+
+
+
+
+
+######################
+### GREEK ALPHABET ###
+######################
+
+
+snippet epsilon	"Epsilon" w
+\epsilon
+endsnippet
+
+snippet eps "Epsilon" w
 \epsilon
 endsnippet
 
 
+
+
+
+
 snippet eq "Equation" b
 \begin{equation}
-	$0
+	$1
 \end{equation}
+$0
 endsnippet
 
-snippet eq* "Equation without number" b
+snippet eqn "Equation without number" b
 \begin{equation*}
-	$0
+	$1
 \end{equation*}
+$0
 endsnippet
 
 snippet al "Align" b
 \begin{align}
-	$0
+	$1
 \end{align}
+$0
 endsnippet
 
-snippet al* "Align without numbers" b
+snippet aln "Align without numbers" b
 \begin{align*}
-	$0
+	$1
 \end{align*}
+$0
 endsnippet
 
 snippet eqa "Equation array" b
@@ -78,7 +379,11 @@ snippet eqa* "Equation array without numbers" b
 endsnippet
 
 snippet frac "Fraction" w
-\frac{${1:${VISUAL}}}{${2}}
+\frac{${1:${VISUAL}}}{${2}} $0
+endsnippet
+
+snippet fr "Fraction" w
+\frac{${1:${VISUAL}}}{${2}} $0
 endsnippet
 
 snippet mat "Smart Matrix"
@@ -102,6 +407,22 @@ endsnippet
 snippet lr[ "left[ right]" w
 \left[ ${1:${VISUAL}} \right]
 endsnippet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #################
 # PHYSICS STUFF #
