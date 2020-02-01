@@ -152,7 +152,7 @@ snippet em
 endsnippet
 
 snippet u
-\underline{$1} $0
+\underline{$1}$0
 endsnippet
 
 snippet b
@@ -168,6 +168,20 @@ snippet en
 	\item $1
 \end{enumerate}
 $0
+endsnippet
+
+snippet chap
+\chapter*{$1}
+	$0
+endsnippet
+
+snippet ver
+\begingroup
+\fontsize{13pt}{12pt}\selectfont
+\begin{verse}
+	$0
+\end{verse}
+\endgroup
 endsnippet
 
 snippet item "Itemize" b
