@@ -95,6 +95,7 @@ snippet prose
 \usepackage[safe]{tipa}
 \DeclareUnicodeCharacter{0201}{\textdoublegrave{a}}
 \usepackage{ulem}
+\emergencystretch 3em
 
 \begin{document} 
 
@@ -125,6 +126,7 @@ snippet poet
 	\vspace{\afterpoemtitleskip}
 }
 \makeatother
+\emergencystretch 3em
 
 \begin{document}
 
@@ -169,6 +171,10 @@ snippet u
 \uline{$1}$0
 endsnippet
 
+snippet uw
+\uwave{$1}$0
+endsnippet
+
 snippet b
 \textbf{$1} $0
 endsnippet
@@ -182,11 +188,6 @@ snippet en
 	\item $1
 \end{enumerate}
 $0
-endsnippet
-
-snippet chap
-\chapter*{$1}
-	$0
 endsnippet
 
 snippet ver
